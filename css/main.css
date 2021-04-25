@@ -1,0 +1,281 @@
+*{
+    margin: 0px;
+    border:0px;
+    font-family: Montserrat-Bold;
+    color:#572EE5;
+}
+
+@font-face{
+    font-family: Montserrat-Bold;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/Montserrat-Bold.ttf');
+}
+
+@font-face{
+    font-family: Montserrat-Medium;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/Montserrat-Medium.ttf');
+}
+
+li{
+    list-style: none;
+  }
+  
+/* Header menu */  
+
+header{
+    border-top: 5px solid #572EE5 ;
+    width: 100%;
+    height: 90px;
+  }
+  
+header nav{
+    display: flex;
+    justify-content: flex-end;
+  }
+   
+.nav-right-section{
+    
+    font-size: 13px;
+    width: 530px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+.nav-right-section li{
+    margin: 5px 20px 5px 0px;
+}
+
+.nav-right-section li a {
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+nav .nav-right-section .menu-icon{
+    background-image: url('../assets/button-crear-gifo.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+  }
+
+/* Header menu Fin --------------------------------------------*/
+
+
+/* Main logo -------------------------------------------------*/
+
+.title-p{
+    font-family: Montserrat-Bold;
+    
+    text-align: center;
+}
+
+.title-s{
+    font-family: Montserrat-Bold;
+    color: #50E3C2 ;
+}
+
+.main-logo{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+
+.logo img{
+    margin: 0 auto;
+    display: block;
+}
+
+/* Main logo fin-----------------------------------------------*/
+
+
+/*main input --------------------------------------------------*/
+
+main .main-input{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+main .main-input-container{
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border: none;
+    outline: none;  /*quita el borde del input*/
+}
+
+.main-title{
+    margin-top: 56px;
+}
+
+.main-title h1, h3{
+    width: 530px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title h1{
+    font-size: 18px;
+
+}
+
+.main-title h3{
+    font-family: Montserrat-Medium;
+    font-size: 13px;
+}
+
+/*main input fin-----------------------------------------------*/
+
+
+/*main trending------------------------------------------------*/
+.main-trending{
+    height: 640px;
+    width: 100%;
+    background-color: #F3F5F8 ;
+}
+
+.trending-title{
+    padding-top: 68px;
+}
+
+.main-trending h1, h3{
+    width: 530px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-trending h1{
+    font-size: 25px;
+}
+
+.main-trending h3{
+    font-family: Montserrat-Medium;
+    font-size: 18px;
+    color: #000000;
+}
+
+/*main trending fin--------------------------------------------*/
+
+/*footer-------------------------------------------------------*/
+
+
+footer{
+    width: 100%;
+    height: 50px;
+   
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    border-bottom: 5px solid #572EE5 ;
+}
+
+footer ul {
+    margin:10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+
+footer .footer-left{
+    justify-self: left;
+}
+
+footer .footer-right{
+    justify-self: right;
+}
+
+
+
+/*footer fin---------------------------------------------------*/
+
+
+/*recording----------------------------------------------------*/
+
+.main-create{
+    height: 700px;
+    display: inline-flex;
+}
+
+.main-recording{
+    height: 500px;
+    width: 688px;
+}
+
+.logo1{
+    margin: 13%;
+}
+
+.box-create{
+    height: 390px;
+    width: 688px; 
+    border:1px solid #572EE5 ;
+}
+
+.box-create .title-p{
+    text-align: center;
+}
+
+.main-recording .video{
+    margin: 6% auto;
+    display: block;
+    width: 480px;
+    height: 265px;
+}
+
+
+.main-recording ul {
+
+    margin: 10px 20px 10px 34%;
+    display: inline-flex;
+}
+
+.main-recording ul li{
+    text-align: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 100px;
+    border: 1px solid #572EE5;
+    margin: 10px;
+    
+}
+
+.line{
+    border-radius: 25px;
+    background-color: #572EE5;
+    border: 2px solid #572EE5;
+}
+
+.button-start{
+    height: 50px;
+    width: 127px;
+    border-radius: 25px;
+    margin: 12px 288px;
+    cursor: pointer;
+
+
+}
+
+
+.logo2{
+    margin: 1%;
+    margin-top: 361px;
+}
