@@ -46,6 +46,8 @@ function opencamara() {
 }
 
 function startRecord() {
+    recorder.destroy();
+    recorder=null;
     captureCamera(function (camera) {
         document.querySelector('h1').innerHTML = 'Waiting for Gif Recorder to start...';
         recorder = RecordRTC(camera, {
@@ -74,7 +76,14 @@ function stopRecord() {
     recorder.stopRecording(stopRecordingCallback);
 }
 
-btnrecord.addEventListener('click',giphycamara);
+function saverecord() {
+    let form = new FormData();
+    form.append('file', recorder.getBlob(), 'myGif.gif');
+    console.log(form.get('file'))
+}
+
+
+btnrecord.addEventListener('click', giphycamara);
 
 
 function giphycamara() {
@@ -86,10 +95,11 @@ function giphycamara() {
         startRecord();
         btnrecord.innerHTML = 'Stop';
         status_record = 2;
-    } else if (status_record == 2);
+    } else if (status_record == 2) {
         stopRecord();
         btnrecord.innerHTML = 'Finalizar';
         status_record = 0;
+    }
 }
 
 //comenzar, Dar acceso a la camara, grabar, finalizar, subir gifo
