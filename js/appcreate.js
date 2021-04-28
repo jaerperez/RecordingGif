@@ -76,12 +76,25 @@ function stopRecord() {
     recorder.stopRecording(stopRecordingCallback);
 }
 
-function saverecord() {
-    let form = new FormData();
-    form.append('file', recorder.getBlob(), 'myGif.gif');
-    console.log(form.get('file'))
-}
 
+
+function UploadGif() {
+    let form = new FormData();    
+    form.append('file', recorder.getBlob(), 'myGif.gif');    
+    fetch('https://upload.giphy.com/v1/gifs?api_key=EapKeNprg8BFJKA8UTk19tF73ar1hmk6', {         
+        method: "POST",
+        body: form,                
+        //This line going crazy my code:
+        //mode: 'cors',                              
+    })
+    .then(response =>response.json())
+    .then(result => {        
+        console.log(result);                
+    })         
+    .catch(error => {
+        console.error("Error: ", error)
+    })  
+}
 
 btnrecord.addEventListener('click', giphycamara);
 
@@ -98,7 +111,12 @@ function giphycamara() {
     } else if (status_record == 2) {
         stopRecord();
         btnrecord.innerHTML = 'Finalizar';
+        status_record = 3;
+    } else if(status_record == 3){
+        UploadGif();
+        btnrecord.innerHTML = 'Subir';
         status_record = 0;
+
     }
 }
 
